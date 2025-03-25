@@ -39,7 +39,7 @@ initializeSocket(server);
 connectDB()
   .then(() => {
     console.log("Database connection established...");
-    server.listen(process.env.PORT, () => {
+    server.listen(process.env.PORT, '0.0.0.0', () => {
       console.log("Server is successfully listening on port 7777...");
     });
   })
